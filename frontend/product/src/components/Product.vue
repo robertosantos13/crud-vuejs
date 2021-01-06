@@ -102,10 +102,11 @@ export default {
       this.$modal.show("modal-product-form", { product: this.product });
     },
   },
-  computed: {
-    refresh: function () {
-      console.log("entrei");
-      return this.products;
+  watch: {
+    products: function (products, newProducts) {
+      if (products !== newProducts) {
+        return this.search();
+      }
     },
   },
 };

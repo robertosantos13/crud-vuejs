@@ -3,7 +3,7 @@
     name="modal-product-form"
     height="400"
     width="400"
-    @before-open="beforeOpen"
+    @editProduct="editProduct"
   >
     <h4>Cadastro de Produtos</h4>
 
@@ -110,7 +110,7 @@ export default {
       }
     },
 
-    beforeOpen(event) {
+    editProduct(event) {
       this.product = event.params.product;
     },
   },
